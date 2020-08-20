@@ -33,6 +33,23 @@ footer p {
 	width: 100%;
 }
 
+.fa-times {
+	z-index: 99999;
+	cursor: pointer;
+}
+
+.close-icon {
+	cursor: pointer;
+	margin: 1rem;
+	font-size: 2.5em;
+	color: #333333;
+	transition: color .35s ease-in-out;
+}
+
+.close-icon:hover {
+	color: #009a00;
+}
+
 #menu-icon,
 #exit-menu-icon,
 #about-icon,
@@ -41,14 +58,15 @@ footer p {
 #contact-icon {
 	z-index: 99999;
 	cursor: pointer;
-	font-size: 3em;
+	font-size: 2.5em;
 	position: absolute;
-	border: 0px solid #fafafa;
-	border-radius: 10px;
-	color: #43ff48;
-	transition: color .1s ease;
-	transition: border .1s ease-in-out;
+	color: #009a00;
+	transition: color .35s ease-in-out;
 	padding: 4px 8px;
+}
+
+#menu-icon {
+	color: #333333;
 }
 
 #about-icon,
@@ -59,46 +77,52 @@ footer p {
 }
 
 #brand-container {
+	z-index: -1;
 	position: absolute;
 	right: 0;
 	margin: 1rem;
 }
 
 #brand-name {
-	font-family: 'Krona One', sans-serif;
-	text-decoration: none;
-	color: #333333;
-	font-size: 2em;
+	width: 40em;
+    height: 20em;
+    margin-top: -6.5em;
+    margin-right: -3em;
+}
+
+#logo-signature {
+	display: none;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 6em;
+    width: 10em;
+    margin-right: 1em;
+    margin-bottom: 1em;
 }
 
 #menu-icon:hover {
-	color: #10ff16;
-	border: 1px solid #fafafa;
+	color: #cccccc; 
 }
 
 #exit-menu-icon:hover {
-	color: #10ff16;
-	border: 1px solid #fafafa;
+	color: #cccccc;
 }
 
 #about-icon:hover {
-	color: #10ff16;
-	border: 1px solid #fafafa;
+	color: #cccccc;
 }
 
 #play-media-icon:hover {
-	color: #10ff16;
-	border: 1px solid #fafafa;
+	color: #cccccc;
 }
 
 #gallery-icon:hover {
-	color: #10ff16;
-	border: 1px solid #fafafa;
+	color: #cccccc;
 }
 
 #contact-icon:hover {
-	color: #10ff16;
-	border: 1px solid #fafafa;
+	color: #cccccc;
 }
 
 #menu-icon {
@@ -118,18 +142,21 @@ footer p {
 }
 
 #play-media-icon {
+	position: absolute;
 	right: 0;
 	top: 50%;
 	transform: translateY(-50%);
 }
 
 #gallery-icon {
+	position: absolute;
 	left: 0;
 	top: 50%;
 	transform: translateY(-50%);
 }
 
 #contact-icon {
+	position: absolute;
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
@@ -143,19 +170,20 @@ footer p {
     z-index: -1;
 }
 
-/*#about,
-#music,
-#mixes,
+#about,
+#media,
+#gallery,
 #contact {
-	position: absolute;
-    left: 100%;
-	width: 100%;
-	height: 100vh;
-	border: 1px solid #333333;
-	background-color: #333333;
-	color: #fafafa;
-}*/
-
-.bg-light {
-    background-color: rgba(0,0,0,0)!important;
+	display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: -webkit-fill-available;
+    box-shadow: 1px 1px 2px 1px #009a00;
+    background-color: #cccccc;
+    color: #333333;
+    border-radius: 18rem 0px 32rem 0px;
 }

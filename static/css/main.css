@@ -1,28 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap:100,200,300,400,500,600,700,800,900');
+/*@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap:100,200,300,400,500,600,700,800,900');*/
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap:100,200,300,400,500,600,700,800,900');
 
 html,
 body {
+	font-family: 'Audiowide', cursive;
 	margin: 0; 
-	height: 100%; 
+	height: 100%;
+	width: 100%;
 	overflow: hidden
-}
-
-footer {
-	font-size: 12px;
-	z-index: 2;
-	position: relative;
-	flex-shrink: 0;
-	text-align: center;
-	background-color: #333333;
-	width: -webkit-fill-available;
-	margin-top: 100vh;
-}
-
-footer p {
-	color: #EEEEEE;
-	padding-top: 0.75rem;
-	padding-bottom: 0.75rem;
-	margin-bottom: 0;
 }
 
 #bg-cover {
@@ -41,7 +26,7 @@ footer p {
 .close-icon {
 	cursor: pointer;
 	margin: 1rem;
-	font-size: 2.5em;
+	font-size: 1.5em;
 	color: #333333;
 	transition: color .35s ease-in-out;
 }
@@ -58,13 +43,14 @@ footer p {
 #contact-icon {
 	z-index: 99999;
 	cursor: pointer;
-	font-size: 2.5em;
+	font-size: 1.5em;
 	position: absolute;
 	color: #009a00;
 	transition: color .35s ease-in-out;
 	padding: 4px 8px;
 }
 
+/*over-ride above color*/
 #menu-icon {
 	color: #333333;
 }
@@ -76,6 +62,57 @@ footer p {
 	display: none;
 }
 
+.section-heading {
+	font-size: 1.5rem;
+	margin-bottom: 1em;
+}
+
+.section-image {
+	width: 100%;
+	position: relative;
+	height: 0px;
+}
+
+.section-image img {
+	box-shadow: 1px 1px 16px 4px #333333;
+}
+
+.about-info {
+	background: linear-gradient(rgba(51, 51, 51, 0.75), rgba(51, 51, 51, 0));
+	font-size: .55rem;
+    padding-left: .75rem;
+    padding-right: .75rem;
+	margin: 0px 1rem;
+	padding-top: 1rem;
+	border-radius: 4px;
+}
+
+.about-info p {
+	color: #f5f5f5;
+}
+
+.social-icons {
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.social-icons i {
+	padding: 6px;
+    border-radius: 4px;
+    color: #009a00;
+    margin: 1rem;
+    background: #cccccc;
+    transition: color .35s ease-in-out;
+}
+
+.social-icons a {
+	text-decoration: none;
+}
+
+.social-icons i:hover {
+	color: #cccccc;
+}
+
 #brand-container {
 	z-index: -1;
 	position: absolute;
@@ -84,10 +121,10 @@ footer p {
 }
 
 #brand-name {
-	width: 40em;
-    height: 20em;
-    margin-top: -6.5em;
-    margin-right: -3em;
+	width: 15em;
+    height: 10em;
+    margin-top: -3.5em;
+    margin-right: -.5em;
 }
 
 #logo-signature {
@@ -95,14 +132,14 @@ footer p {
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	height: 6em;
-    width: 10em;
+	height: 5em;
+    width: 7em;
     margin-right: 1em;
     margin-bottom: 1em;
 }
 
 #menu-icon:hover {
-	color: #cccccc; 
+	color: #009a00;
 }
 
 #exit-menu-icon:hover {
@@ -183,7 +220,89 @@ footer p {
     width: 100%;
     height: -webkit-fill-available;
     box-shadow: 1px 1px 2px 1px #009a00;
-    background-color: #cccccc;
+    background-color: #fcfcfc;
     color: #333333;
-    border-radius: 18rem 0px 32rem 0px;
+    border-radius: 15rem 0px 24rem 0px;
+}
+
+/****************************************************************media queries*/
+
+@media (min-width: 320px) {
+	.about-info {
+		font-size: .7rem;
+		padding-left: 1rem;
+    	padding-right: 1rem;
+	}
+}
+
+@media (min-width: 375px) {
+	.about-info {
+		font-size: .75rem;
+	}
+}
+
+@media (min-width: 393px) {
+	.about-info {
+		font-size: .8rem;
+	}
+}
+
+@media (min-width: 412px) {
+	.about-info {
+		font-size: .85rem;
+	}
+}
+
+@media (min-width: 450px) {
+	.about-info {
+		font-size: 1rem;
+	}
+}
+
+@media (min-width: 576px) {
+	.about-info {
+	    font-size: 1.25rem;
+	}
+}
+
+@media (min-width: 768px) {
+	#about,
+	#media,
+	#gallery,
+	#contact {
+		background-color: rgba(204, 204, 204, 0.2);
+	}
+	.about-info {
+		font-size: 1rem;
+		background: none;
+	}
+	.close-icon,
+	.section-heading,
+	.about-info p {
+		color: #cccccc;
+	}
+	.section-image {
+	    height: 0px;
+	    margin: 1em;
+	}
+	#brand-name {
+	    width: 20em;
+	    height: 14em;
+	    margin-top: -4.5em;
+	    margin-right: -1.5em;
+	}
+	#menu-icon,
+	#exit-menu-icon,
+	#about-icon,
+	#play-media-icon,
+	#gallery-icon,
+	#contact-icon {
+		font-size: 2em;
+	}
+	.close-icon {
+		font-size: 2em;
+	}
+	.social-icons i {
+	    background: none;
+	}
 }
